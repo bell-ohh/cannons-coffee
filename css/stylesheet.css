@@ -49,6 +49,13 @@ h3 {
   font-family: Poppins;
 }
 
+.page-wrapper {
+  max-width: 1200px;
+  padding: 2rem;
+  margin: auto;
+  background-color: var(--catalina);
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -131,17 +138,57 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
+ .burger {
+        display: none;
+    }
 
-.page-wrapper {
-  max-width: 1200px;
-  padding: 2rem;
-  margin: auto;
-  background-color: var(--catalina);
+@media (max-width: 649px) {
+  header {
+    max-height: 176px;
+    
+  }
+  
+  .navbwr {
+            display: flex;
+        justify-content: flex-end;
+        position: relative;
+        bottom: 3rem;
+    }
+
+  
+  .nav {
+        margin: 0;
+        background: #343434;
+        position: absolute;
+        display: none;
+        top: 176px;
+        width: 50%;
+        height: calc(100% - 70px);
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0;
+        transition: all 400ms;
+    }
+  
+  .navlink {
+        text-align: center;
+    }
+    .nav-active {
+        right: 0;
+      display: block;
+    }
+  
+  .burger {
+        display: block;
+    }
+  
+  
 }
 
 @media (min-width: 650px) {
   .grid-container {
     display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
 }
@@ -174,88 +221,4 @@ footer {
     justify-content: flex-start;
     gap: 1rem;
   }
-}
-
-
-
-/* FOR THE FORMS */
-
-.plasticblue {
-	font-family: "Poppins", sans-serif;
-	padding: 50px;
-	width: 30%;
-	background-color: #ffffff;
-	border-radius: 20px;
-	color: #06327D;
-	margin: 2rem auto;
-}
-
-h2 {
-	color: var(--white);
-	font-family: "Poppins", sans-serif;
-	text-align: center;
-	font-size: 3rem;
-}
-
-h3 {
-	color: var(--white);
-	font-family: "Poppins", sans-serif;
-	text-align: center;
-	font-size: 2rem;
-  font-weight: normal;
-}
-
-
-h4 {
-	color: var(--white);
-	font-family: "Poppins", sans-serif;
-	text-align: center;
-	font-size: 16px;
-  font-weight: normal;
-  
-}
-
-
-
-input[type="submit"] {
-	padding: 15px;
-	border-radius: 10px;
-  background-color: var(--catalina);
-	font-family: "Poppins", sans-serif;
-	color: var(--white);
-	border: none;
-	font-size: 1.1rem;
-	display: block;
-	cursor: pointer;
-	margin-top: 1rem;
-}
-
-.input-wrapper {
-	display: flex;
-	flex-direction: row;
-	align-content: flex-start;
-	justify-content: space-between;
-	align-items: center;
-}
-
-input[type="tel"],
-input[type="email"],
-input[type="text"] {
-	border: 1px solid var(--catalina);
-	width: 80%;
-}
-
-.submit-btn-wrppr {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-}
-
-textarea {
-  border: 1px solid var(--catalina);
-  max-width: 100%;
-}
-
-h6 {
-  font-weight: normal;
 }

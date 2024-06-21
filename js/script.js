@@ -14,7 +14,7 @@ function onFormSubmit(event) {
 	form.reset();
 }
 
-
+//toggle
 const burger = document.querySelector(".burger i");
 console.log(burger);
 const nav = document.querySelector(".nav");

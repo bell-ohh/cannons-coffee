@@ -149,7 +149,7 @@ footer {
   }
   
   .navbwr {
-            display: flex;
+        display: flex;
         justify-content: flex-end;
         position: relative;
         bottom: 3rem;
